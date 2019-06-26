@@ -1,0 +1,57 @@
+doctype html
+html(lang="pt-br")
+	head
+		meta(charset="utf-8")
+		title Music
+
+		meta(name="description", content="Music")
+
+		//- link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Barlow:400,500,600,700,800|Material+Icons")
+
+		if (env === "development")
+			link(rel="stylesheet", href="music.css")
+		else
+			link(rel="stylesheet", href="./../../public/music.css", inline)
+
+		meta(name="mobile-web-app-capable", content="yes")
+		meta(name="apple-mobile-web-app-capable", content="yes")
+		meta(name="application-name", content="Music")
+		meta(name="apple-mobile-web-app-title", content="Music")
+		meta(name="theme-color", content="#003c8f")
+		meta(name="msapplication-navbutton-color", content="#003c8f")
+		meta(name="apple-mobile-web-app-status-bar-style", content="black-translucent")
+		meta(name="msapplication-starturl", content="/")
+		meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+
+		if (env === "production")
+			link(rel="manifest", href="/manifest.json")
+			link(rel="icon" type="image/png" sizes="512x512" href="/icon.png")
+			link(rel="apple-touch-icon" type="image/png" sizes="512x512" href="/icon.png")
+
+		//- link(rel="preload", as="font", href="cabin-400.woff2", type="font/woff2")
+		//- link(rel="preload", as="font", href="cabin-500.woff2", type="font/woff2")
+		//- link(rel="preload", as="font", href="material-icons.woff2", type="font/woff2")
+
+		script var env = "#{env}";
+
+	body
+		.app
+			.stations
+				.appbar
+					h1
+						span.station-name
+						span.placeholder Estações
+					i.station-list-trigger.material-icons menu
+					i.options-trigger.material-icons more_vert
+				.list: ul
+			.panel
+
+		- var inline = env === "development"? false : true;
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js", integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh", crossorigin="anonymous")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js", integrity="sha384-fYxN7HsDOBRo1wT/NSZ0LkoNlcXvpDpFy6WzB42LxuKAX7sBwgo7vuins+E1HCaw", crossorigin="anonymous")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/pt-br.js", integrity="sha384-rMnAUuld2UG2Cd+wqmGwCPZGHemXzhyJss9LFN3y2b8FNsBOrGEHpbeUFMiP1rx+", crossorigin="anonymous")
+
+		if (env === "development")
+			script(src="music.js", inline=inline)
+		else
+			script(src="./../../public/music.js", inline=inline)
