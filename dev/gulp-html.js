@@ -12,7 +12,6 @@ const config = require("./gulp-config.js");
 
 // Módulos específicos para HTML
 const pug = require("gulp-pug");
-const inline = require("gulp-inline-source");
 
 let tasks = { };
 
@@ -37,7 +36,6 @@ tasks["stage"] = function stageHTML(done) {
                 }
             }))
 
-            .pipe(inline())
             .pipe(rename("index.html"))
             .pipe(gulp.dest(config["html"]["destination"][channel], { mode: "0644" }));
     }
