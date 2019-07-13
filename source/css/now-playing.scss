@@ -34,4 +34,21 @@ $now-playing-height: 72px;
         flex-grow: 2;
         order: 2;
     }
+
+    .button {
+        $size: 32px;
+        width: $size;
+        height: $size;
+        border-radius: 50%;
+        margin: 0 4px;
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        i {
+            // font-size: 32px;
+        }
+    }
 }

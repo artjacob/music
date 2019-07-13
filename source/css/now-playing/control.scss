@@ -5,36 +5,20 @@
 .now-playing .control {
     // @include scaffolding();
     // padding: 0 44px;
+    max-width: 800px;
+    text-align: center;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
 
     .buttons {
         padding-bottom: 6px;
         display: flex;
 
-        .button {
-            $size: 32px;
-            width: $size;
-            height: $size;
-            margin: 0 4px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            i {
-                // font-size: 32px;
-            }
-        }
-
-
         .play {
             border: 1px solid #000;
-            border-radius: 50%;
             order: 5;
         }
 
@@ -59,12 +43,22 @@
         align-items: center;
 
         .bar {
-            height: 4px;
-            border-radius: 2px;
+            $size: 4px;
+            height: $size;
+            border-radius: $size / 2;
             background-color: rgba(#000, 0.1);
 
             order: 5;
             flex-grow: 2;
+
+            .elapsed {
+                display: block;
+                min-width: $size;
+                width: 0;
+                height: $size;
+                border-radius: $size / 2;
+                background-color: rgba(#000, 0.75);
+            }
         }
 
         .time {

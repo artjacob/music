@@ -5,5 +5,31 @@
 .now-playing .options {
     // @include scaffolding();
 
-    // visibility: hidden;
+    padding-right: 9px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .up-next {
+        $size: 36px;
+        height: $size;
+        margin-left: 6px;
+        border-radius: $size / 2;
+        background-color: rgba(#000, 0.1);
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .button {
+            margin-right: 0;
+        }
+
+        .time-left {
+            padding-right: 9px;
+            font-size: 14px;
+        }
+    }
 }
