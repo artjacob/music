@@ -1,0 +1,86 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// now playing / control ///////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.now-playing .control {
+    // @include scaffolding();
+    // padding: 0 44px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .buttons {
+        padding-bottom: 6px;
+        display: flex;
+
+        .button {
+            $size: 32px;
+            width: $size;
+            height: $size;
+            margin: 0 4px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            i {
+                // font-size: 32px;
+            }
+        }
+
+
+        .play {
+            border: 1px solid #000;
+            border-radius: 50%;
+            order: 5;
+        }
+
+        .skip {
+            // color: rgba(#000, 0.666);
+        }
+
+        .skip-previous {
+            order: 3;
+        }
+
+        .skip-next {
+            order: 7;
+        }
+    }
+
+    .timeline {
+        width: 85%;
+        // background-color: rgba(yellow, 0.25);
+
+        display: flex;
+        align-items: center;
+
+        .bar {
+            height: 4px;
+            border-radius: 2px;
+            background-color: rgba(#000, 0.1);
+
+            order: 5;
+            flex-grow: 2;
+        }
+
+        .time {
+            width: 34px;
+            padding-bottom: 1px;
+            font-size: 10px;
+        }
+
+        .position {
+            text-align: left;
+            order: 3;
+        }
+
+        .length {
+            text-align: right;
+            order: 7;
+        }
+    }
+}

@@ -12,6 +12,14 @@
             .cover(style="background-image: url('https://lh3.ggpht.com/Cc4TZKHRq_rdChujsY__QSMO0Hcmw9kPomu9zE06vz-tjKgiVaPo4evmIyN6Gp1owl9uRK_rE-c');")
 
     .control
-        .play: i.material-icons play_arrow
-        .skip-previous: i.material-icons skip_previous
-        .skip-next: i.material-icons skip_next
+        .buttons
+            .button.play: i.material-icons play_arrow
+            .button.skip.skip-previous: i.material-icons skip_previous
+            .button.skip.skip-next: i.material-icons skip_next
+        .timeline
+            .bar: .elapsed
+            .time.position 00:00
+            .time.length 00:00
+
+    .options
+        .playlist: i.material-icons queue_music

@@ -12,4 +12,11 @@ body {
     box-sizing: border-box;
 }
 
+// Core
+@import "core/mixins";
+
+// Now Playing
 @import "now-playing";
+@import "now-playing/display";
+@import "now-playing/control";
+@import "now-playing/options";

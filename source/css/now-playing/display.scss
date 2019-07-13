@@ -1,0 +1,46 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// now playing /////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.now-playing .display {
+    // @include scaffolding();
+
+    height: 100%;
+    padding: 9px 9px 0 $now-playing-height + 4px;
+
+    .art {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: $now-playing-height;
+        padding: 9px;
+        // background-color: yellow;
+    }
+
+    .cover {
+        width: 100%;
+        height: 100%;
+        // width: $now-playing-height * 0.8;
+        // height: $now-playing-height * 0.8;
+        // padding-top: 100%;
+        background: no-repeat center;
+        background-size: cover;
+        box-shadow:
+                0 1px 3px -1px rgba(#000, 0.5),
+                0 2px 6px 0 rgba(#000, 0.18),
+                0 1px 12px 0 rgba(#000, 0.12);
+    }
+
+    .song {
+        font-weight: 600;
+    }
+
+    .artist {
+        font-size: 14px;
+    }
+
+    .album {
+        font-size: 12px;
+    }
+}
