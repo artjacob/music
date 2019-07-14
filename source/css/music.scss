@@ -2,18 +2,27 @@
 // music ///////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
+$primary-color: #1e5a88;
+$background-color: #eee;
+
 body {
     margin: 0;
     font: 16px "ibm plex sans", sans-serif;
-    background-color: #eee;
+    background-color: $background-color;
 }
 
 * {
     box-sizing: border-box;
 }
 
+$layer-navigation: 1;
+$layer-now-playing: 2;
+
 // Core
 @import "core/mixins";
+
+// Navigation
+@import "navigation";
 
 // Now Playing
 @import "now-playing";
