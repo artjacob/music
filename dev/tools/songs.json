@@ -1,10 +1,10 @@
 [
     {
         "title": "Bye Bye Bye",
-        "artist": "*NSYNC",
+        "artist": "NSYNC",
         "artist-picture": "https://lh3.googleusercontent.com/bxgvmMLCn6Iroo9A3K9GXXfzdzmbI7YuhdVMzPvWoY3GWmjBznDkp57-QPNC70aDXQAlI582qQ",
         "album": "No Strings Attached",
-        "album-artist": "*NSYNC",
+        "album-artist": "NSYNC",
         "album-cover": "https://lh3.googleusercontent.com/rOu9s0D5qlgMtFBfrGKqMdUB7yVBJX4CIg3QYRuPFCJY2IpdFOdh09QEAeZEPc-QUG8mfLho",
         "album-track": 1,
         "length": 200,
@@ -225,10 +225,10 @@
     },
     {
         "title": "Tearin' up My Heart (Radio Edit)",
-        "artist": "'N Sync",
+        "artist": "NSYNC",
         "artist-picture": "https://lh3.googleusercontent.com/bxgvmMLCn6Iroo9A3K9GXXfzdzmbI7YuhdVMzPvWoY3GWmjBznDkp57-QPNC70aDXQAlI582qQ",
-        "album": "'N Sync",
-        "album-artist": "'N Sync",
+        "album": "NSYNC",
+        "album-artist": "NSYNC",
         "album-cover": "https://lh3.googleusercontent.com/vwaDJhQ6ZV_1q4o2PiUPMCD14ePIU9hxogy4W5ZrApmTWrvakAnr79uPbJJlX5pfmcKOqa4PjdU",
         "album-track": 1,
         "length": 211,
@@ -239,10 +239,10 @@
     },
     {
         "title": "It's Gonna Be Me",
-        "artist": "*NSYNC",
+        "artist": "NSYNC",
         "artist-picture": "https://lh3.googleusercontent.com/bxgvmMLCn6Iroo9A3K9GXXfzdzmbI7YuhdVMzPvWoY3GWmjBznDkp57-QPNC70aDXQAlI582qQ",
         "album": "No Strings Attached",
-        "album-artist": "*NSYNC",
+        "album-artist": "NSYNC",
         "album-cover": "https://lh3.googleusercontent.com/rOu9s0D5qlgMtFBfrGKqMdUB7yVBJX4CIg3QYRuPFCJY2IpdFOdh09QEAeZEPc-QUG8mfLho",
         "album-track": 2,
         "length": 192,
@@ -253,10 +253,10 @@
     },
     {
         "title": "I Want You Back (Radio Edit)",
-        "artist": "'N Sync",
+        "artist": "NSYNC",
         "artist-picture": "https://lh3.googleusercontent.com/bxgvmMLCn6Iroo9A3K9GXXfzdzmbI7YuhdVMzPvWoY3GWmjBznDkp57-QPNC70aDXQAlI582qQ",
-        "album": "'N Sync",
-        "album-artist": "'N Sync",
+        "album": "NSYNC",
+        "album-artist": "NSYNC",
         "album-cover": "https://lh3.googleusercontent.com/vwaDJhQ6ZV_1q4o2PiUPMCD14ePIU9hxogy4W5ZrApmTWrvakAnr79uPbJJlX5pfmcKOqa4PjdU",
         "album-track": 8,
         "length": 202,
@@ -267,10 +267,10 @@
     },
     {
         "title": "Pop",
-        "artist": "*NSYNC",
+        "artist": "NSYNC",
         "artist-picture": "https://lh3.googleusercontent.com/bxgvmMLCn6Iroo9A3K9GXXfzdzmbI7YuhdVMzPvWoY3GWmjBznDkp57-QPNC70aDXQAlI582qQ",
         "album": "Celebrity",
-        "album-artist": "'N Sync",
+        "album-artist": "NSYNC",
         "album-cover": "https://lh6.ggpht.com/Vb5G3cZbpfSzY_ZulH5JXBxgiIQzcVgjpTLYK0AHc9ykuVHLRAd5Kn1AiAuFBmXEszV_Mwo3tw",
         "album-track": 1,
         "length": 238,
@@ -2394,20 +2394,6 @@
         "price": 2.99
     },
     {
-        "title": "Anaconda",
-        "artist": "Nicki Minaj",
-        "artist-picture": "https://lh3.googleusercontent.com/4_U0pL79SiBSRRQgmSYr7XzMl6IsSL9PQj88Q-x9D6oAIE-SSEK1l3zqE_yMb-7ReXLquw4r",
-        "album": "The Pinkprint",
-        "album-artist": "Nicki Minaj",
-        "album-cover": "https://lh3.googleusercontent.com/aSBWgtAb6gzzssjXWuN8JOv-YowTS8RTnuycNCIvEgMp2CV3JAg8gNACq9pp-upFRWGlf7LL2ug",
-        "album-track": 12,
-        "length": 260,
-        "year": 2014,
-        "genre": "Hip-Hop/Rap",
-        "youtube-id": "LDZX4ooRsWs",
-        "price": 2.99
-    },
-    {
         "title": "Come & Get It",
         "artist": "Selena Gomez",
         "artist-picture": "https://lh3.googleusercontent.com/3peMnu_ESWXeDsgBJws_OvaRHa7C6NaLYrnEIyViNCwW3ksdO53WrZtpH5LeTuP7UkjfVNOudg",
@@ -3444,34 +3430,6 @@
         "price": 5.99
     },
     {
-        "title": "Starships",
-        "artist": "Nicki Minaj",
-        "artist-picture": "https://lh3.googleusercontent.com/4_U0pL79SiBSRRQgmSYr7XzMl6IsSL9PQj88Q-x9D6oAIE-SSEK1l3zqE_yMb-7ReXLquw4r",
-        "album": "Pink Friday: Roman Reloaded The Re-Up (Explicit Version)",
-        "album-artist": "Nicki Minaj",
-        "album-cover": "https://lh3.googleusercontent.com/oinTeAhrJHm0EGtaiXWuNDdWVJoDIj4PRnNqHY5q4RF43NBZ7uWie3XlAOrqBryPCU0stq4v",
-        "album-track": 10,
-        "length": 210,
-        "year": 2012,
-        "genre": "Hip-Hop/Rap",
-        "youtube-id": "SeIJmciN8mo",
-        "price": 2.99
-    },
-    {
-        "title": "Super Bass",
-        "artist": "Nicki Minaj",
-        "artist-picture": "https://lh3.googleusercontent.com/4_U0pL79SiBSRRQgmSYr7XzMl6IsSL9PQj88Q-x9D6oAIE-SSEK1l3zqE_yMb-7ReXLquw4r",
-        "album": "Pink Friday",
-        "album-artist": "Nicki Minaj",
-        "album-cover": "https://lh3.googleusercontent.com/RAr6xBoT2xfUDfDDrdMmuuWRXlr0aa8B07XZZctGHL3yednsvhvvqLkIXzJBV22IgV2YLStnUg",
-        "album-track": 14,
-        "length": 200,
-        "year": 2010,
-        "genre": "Hip-Hop Hitmakers",
-        "youtube-id": "4JipHEz53sU",
-        "price": 2.99
-    },
-    {
         "title": "Smells Like Teen Spirit",
         "artist": "Nirvana",
         "artist-picture": "https://lh3.googleusercontent.com/6rZYI7T2BlQvPP3vM2kAsPa-usqhHzaN5pexOJ5DJLSf5OEKs7FN0qbl5bSF7ROozvieX-tAcwI",
@@ -4228,20 +4186,6 @@
         "price": 4.99
     },
     {
-        "title": "Maniac",
-        "artist": "Michael Sembello",
-        "artist-picture": "https://lh3.googleusercontent.com/t5atXBrVUNuFXuCBgQoniOwl4ZjuwUwDhpi-zFN22sS8fSylT6--4TtJ2Ro7pHuZOx-frL6s6g",
-        "album": "Flashdance Original Soundtrack From The Motion Picture",
-        "album-artist": "Various Artists",
-        "album-cover": "https://lh3.googleusercontent.com/VMw70-9K40xupT80ParLTJq9ugRG_Mxz-acTsJIx_kHz7znoQqDhI3K4ZUO0R2_8s_8HkwpZvsQ",
-        "album-track": 10,
-        "length": 244,
-        "year": 1983,
-        "genre": "Dance/Electronic",
-        "youtube-id": null,
-        "price": 2.99
-    },
-    {
         "title": "YMCA (Original Version 1978)",
         "artist": "Village People",
         "artist-picture": "https://lh3.googleusercontent.com/sGpuFtupgK6JbtnwaOz_xswwC32Sxp7vl4lM1ZVvDEe2hVksDtuQtFoWNCX4KNGW4Trvm0CdoQ",
@@ -4466,20 +4410,6 @@
         "price": 2.29
     },
     {
-        "title": "Jai Ho! (You Are My Destiny) (feat. Nicole Scherzinger)",
-        "artist": "A.R. Rahman",
-        "artist-picture": "https://lh3.googleusercontent.com/se5vLWc1rCZsqbmLInc4zY5zSc_wnbl_Q3pLQ1knD_wRuo6xAyA_LGUpH5k8JcZVthM93qVQ6IQ",
-        "album": "Jai Ho! (You Are My Destiny)",
-        "album-artist": "A.R. Rahman",
-        "album-cover": "https://lh3.googleusercontent.com/bfV2VW0tRkX2ntXtbgN3IJ0YSKRyEx5wav9QDUcd4Cl5RshUc4ysNqCyl_-jX7VMokGwZOB2RA",
-        "album-track": 1,
-        "length": 222,
-        "year": 2009,
-        "genre": "Teen Pop",
-        "youtube-id": "Yc5OyXmHD0w",
-        "price": 1.99
-    },
-    {
         "title": "Sway",
         "artist": "The Pussycat Dolls",
         "artist-picture": "https://lh3.googleusercontent.com/zdnYeE5bq4sF92aQJzRJWLWyuRFasymY3mgdrcvfR9xS2F75FageRfZzEAnsZoeUi1YPVVcU",
@@ -4523,10 +4453,10 @@
     },
     {
         "title": "Girlfriend",
-        "artist": "'N Sync",
+        "artist": "NSYNC",
         "artist-picture": "https://lh3.googleusercontent.com/bxgvmMLCn6Iroo9A3K9GXXfzdzmbI7YuhdVMzPvWoY3GWmjBznDkp57-QPNC70aDXQAlI582qQ",
         "album": "Celebrity",
-        "album-artist": "'N Sync",
+        "album-artist": "NSYNC",
         "album-cover": "https://lh6.ggpht.com/Vb5G3cZbpfSzY_ZulH5JXBxgiIQzcVgjpTLYK0AHc9ykuVHLRAd5Kn1AiAuFBmXEszV_Mwo3tw",
         "album-track": 4,
         "length": 253,
@@ -4537,10 +4467,10 @@
     },
     {
         "title": "This I Promise You",
-        "artist": "*NSYNC",
+        "artist": "NSYNC",
         "artist-picture": "https://lh3.googleusercontent.com/bxgvmMLCn6Iroo9A3K9GXXfzdzmbI7YuhdVMzPvWoY3GWmjBznDkp57-QPNC70aDXQAlI582qQ",
         "album": "No Strings Attached",
-        "album-artist": "*NSYNC",
+        "album-artist": "NSYNC",
         "album-cover": "https://lh3.googleusercontent.com/rOu9s0D5qlgMtFBfrGKqMdUB7yVBJX4CIg3QYRuPFCJY2IpdFOdh09QEAeZEPc-QUG8mfLho",
         "album-track": 6,
         "length": 284,
@@ -4760,20 +4690,6 @@
         "price": 2.99
     },
     {
-        "title": "Rather Be (feat. Jess Glynne)",
-        "artist": "Clean Bandit",
-        "artist-picture": "https://lh3.googleusercontent.com/kJkUKtDBAlmtN_BOQYAhcvas-Bi-JAclKzaXENephqxiGR3lI1CZdP6IE2wrTwD7dioVZ2EKQQ",
-        "album": "Rather Be feat. Jess Glynne",
-        "album-artist": "Clean Bandit",
-        "album-cover": "https://lh3.googleusercontent.com/GzB45fjUHgYOUWkjEExIRgjeywII93nIkfMJqrTvi7NJhDbpV3jrwp6racDKwRsZDxBA1vzR",
-        "album-track": 1,
-        "length": 227,
-        "year": 2014,
-        "genre": "House",
-        "youtube-id": "m-M1AtrxztU",
-        "price": 5.99
-    },
-    {
         "title": "Best Friend",
         "artist": "Foster The People",
         "artist-picture": "https://lh3.googleusercontent.com/0KazqE4G8aSk3XYc_5cIvbNdSiD-UwTbtyA0v_3KSfkwqs-pgMrx9AEv07ZxlXXUNL7-yArFDg",
@@ -4926,20 +4842,6 @@
         "genre": "'10s Rock",
         "youtube-id": "1G4isv_Fylg",
         "price": 5.99
-    },
-    {
-        "title": "Believer",
-        "artist": "American Authors",
-        "artist-picture": "https://lh3.googleusercontent.com/Z3Cgm6GyXNbHe4k38e_YPldM9x4w4LU1Q4XbgNLJnyQV4Ar1b0_980ezCOfyW_9nADN_iptqnw",
-        "album": "Oh, What A Life",
-        "album-artist": "American Authors",
-        "album-cover": "https://lh3.googleusercontent.com/3Nyuu1YwGlh3W3sODdeuzcrRH0GoY5BEkzww5GA-xCl-Hd0gD5Y5mCoB7nDKHKQel0CYLAY6XA",
-        "album-track": 1,
-        "length": 183,
-        "year": 2014,
-        "genre": "'10s Alternative",
-        "youtube-id": "DYj40-cZ5vI",
-        "price": 2.99
     },
     {
         "title": "I'm A Believer",

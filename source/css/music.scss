@@ -25,3 +25,13 @@ $layer-now-playing: 2;
 
 // Navigation
 @import "navigation";
+
+// Screens
+.screen {
+    position: fixed;
+    top: 0;
+    bottom: $now-playing-height;
+    left: $navigation-width * 4.25;
+    right: 0;
+    overflow-y: auto;
+}
