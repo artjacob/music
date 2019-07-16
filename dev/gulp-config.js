@@ -20,7 +20,7 @@ config["css"] = {
 config["js"] = {
 	"color": "yellow",
 	"dir": "./source/js/",
-	"watch": ["**/**.js"],
+	"watch": ["**/**.js", "**/**.json"],
 	"source": fs.readJsonSync("./source/js/modules.json"),
 	"destination": {
 		"development": "./public/"

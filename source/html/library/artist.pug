@@ -2,19 +2,15 @@
 //- library / artist ///////////////////////////////////////////////////////////////////////////////
 //- ////////////////////////////////////////////////////////////////////////////////////////////////
 
-mixin album(title, year, cover)
-    li: a(href="#")
-        .art(style="background-image: url('" + cover + "')")
-        .title= title
-        .year= year
-
-.library
+template#artist
     .artist
-        h1 The Beatles
+        h1.fill(data-fill="title")
 
-        .albums
-            .studio
-                ul
-                    +album("The Beatles", 1968)
-
+        .albums: ul
         .hits
+
+template#artist-album
+    li: a.album(href="#")
+        .art.fill(data-fill="style: cover-art")
+        .title.fill(data-fill="title")
+        .year.fill(data-fill="year")

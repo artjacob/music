@@ -12,16 +12,16 @@
   <div class="navigation">
    <div class="sidebar">
     <ul>
-     <li class="favorites">
+     <li class="-favorites">
       <div class="button"><i class="material-icons">loyalty</i></div>
      </li>
-     <li class="library -state--active">
+     <li class="-library -state--active">
       <div class="button"><i class="material-icons">music_note</i></div>
      </li>
-     <li class="playlists">
+     <li class="-playlists">
       <div class="button"><i class="material-icons">playlist_play</i></div>
      </li>
-     <li class="search">
+     <li class="-search">
       <div class="button"><i class="material-icons">search</i></div>
      </li>
     </ul>
@@ -223,6 +223,7 @@
     </ul>
    </div>
   </div>
+  <div class="library"></div>
   <div class="now-playing">
    <div class="display">
     <div class="info">
@@ -257,24 +258,21 @@
     </div>
    </div>
   </div>
-  <div class="screen">
-   <div class="library">
-    <div class="artist">
-     <h1>The Beatles</h1>
-     <div class="albums">
-      <div class="studio">
-       <ul>
-           <li><a href="#">
-             <div class="art" style="background-image: url('undefined')"></div>
-             <div class="title">The Beatles</div>
-             <div class="year">1968</div></a></li>
-       </ul>
-      </div>
-     </div>
-     <div class="hits"></div>
+  <template id="artist">
+   <div class="artist">
+    <h1 class="fill" data-fill="title"></h1>
+    <div class="albums">
+     <ul></ul>
     </div>
+    <div class="hits"></div>
    </div>
-  </div>
+  </template>
+  <template id="artist-album">
+   <li><a class="album" href="#">
+     <div class="art fill" data-fill="style: cover-art"></div>
+     <div class="title fill" data-fill="title"></div>
+     <div class="year fill" data-fill="year"></div></a></li>
+  </template>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha384-fYxN7HsDOBRo1wT/NSZ0LkoNlcXvpDpFy6WzB42LxuKAX7sBwgo7vuins+E1HCaw" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/pt-br.js" integrity="sha384-rMnAUuld2UG2Cd+wqmGwCPZGHemXzhyJss9LFN3y2b8FNsBOrGEHpbeUFMiP1rx+" crossorigin="anonymous"></script>

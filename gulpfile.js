@@ -42,10 +42,10 @@ gulp.task("serve", gulp.parallel("watch", function serve(done) {
 		"notify": false,
 		"open": (process.argv.includes("-s") ? false : true),
 		"server": "./public",
-		// "serveStatic": [{
-		// 	"route": "/assets",
-		// 	"dir": "bower_components"
-		// }]
+		"serveStatic": [{
+			"route": "/data",
+			"dir": "source/data"
+		}]
 	});
 	done();
 }));

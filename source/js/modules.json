@@ -1,5 +1,9 @@
 [
 	"source/js/base.js",
 
+	"source/js/core/template-engine.js",
+
+	"source/js/artist.js",
+
 	"source/js/start.js"
 ]

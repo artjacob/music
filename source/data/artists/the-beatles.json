@@ -1,10 +1,41 @@
 {
-    "artist": {
-        "title": "The Beatles"
-    },
+    "title": "The Beatles",
     "albums": [
         {
-            "title": "The Beatles"
+            "title": "A Hard Day's Night",
+            "year": 1964,
+            "cover": "https://lh3.googleusercontent.com/9fFIIzbJSz-WoL3h_TPvC2RBFi-K8YhP-W0dHJKtLXViGusBEkH3Kwb4BZUUURd_jA8XgjxrHXc",
+            "type": "studio"
+        },
+        {
+            "title": "Revolver",
+            "year": 1966,
+            "cover": "https://lh3.googleusercontent.com/bt9bdIc4cEbjaf_xaJay7Mo63ucCddc8S5CAv_J9LOau1V6QDL0QERAqs55c_NgrHs3kahh-dg",
+            "type": "studio"
+        },
+        {
+            "title": "Sgt. Pepper's Lonely Hearts Club Band",
+            "year": 1967,
+            "cover": "https://lh3.googleusercontent.com/1hhBQevr6ji-xPkzw-hqeZpJrKGx4orErLF7Te-2k9xZtCzEPvQENG4AHz_IMT3OEJ0EoCniSg",
+            "type": "studio"
+        },
+        {
+            "title": "The Beatles",
+            "year": 1968,
+            "cover": "https://lh3.googleusercontent.com/htraFhjMRG6oayREDISWrp8JKeW00jYHCzRIG6Ruzr1PzZ0mEZh_Yx9YfTuhHo9YSi16kQcCXA",
+            "type": "studio"
+        },
+        {
+            "title": "Abbey Road",
+            "year": 1969,
+            "cover": "https://lh3.googleusercontent.com/0tCFUXZgbM8SpqXXPec2eaB81WkH7jGodDRCUYs2dyq524CsWKC8kBkMMF4DfhS0SCdwC3iF6w",
+            "type": "studio"
+        },
+        {
+            "title": "Let It Be",
+            "year": 1970,
+            "cover": "https://lh3.googleusercontent.com/XpUYuTxF5T4z8PZDCSmXSZvbHdBrTxciaMBuSxfQ46wD-U7WvowwbXPICVcjBaDd_Tul93rSYw",
+            "type": "studio"
         }
     ]
 }

@@ -8,10 +8,10 @@ mixin link(text)
 .navigation
     .sidebar
         ul
-            li.favorites: .button: i.material-icons loyalty
-            li.library.-state--active: .button: i.material-icons music_note
-            li.playlists: .button: i.material-icons playlist_play
-            li.search: .button: i.material-icons search
+            li.-favorites: .button: i.material-icons loyalty
+            li.-library.-state--active: .button: i.material-icons music_note
+            li.-playlists: .button: i.material-icons playlist_play
+            li.-search: .button: i.material-icons search
         //- ul
             li.podcasts: .button: i.material-icons subscriptions
             li.comedy: .button: i.material-icons tag_faces
@@ -209,3 +209,5 @@ mixin link(text)
         +link("will.i.am")
         +link("The Wonders")
         +link("Yellowcard")
+
+.library
