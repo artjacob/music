@@ -69,6 +69,7 @@ $navigation-width: 64px;
 
     // Painel
     .panel {
+        @include scroll;
         width: $navigation-width * 3.25;
         height: 100%;
         padding: 12px 0 24px;
@@ -79,32 +80,6 @@ $navigation-width: 64px;
         z-index: 1;
 
         position: relative;
-
-        &::-webkit-scrollbar {
-            width: 4px;
-        }
-
-        &::-webkit-scrollbar-thumb {
-            background-color: rgba(#000, 0.075);
-        }
-
-        &::-webkit-scrollbar-thumb:hover {
-            background-color: rgba(#000, 0.1);
-        }
-
-        &::-webkit-scrollbar-thumb:active {
-            background-color: rgba(#000, 0.2);
-        }
-
-        &:hover {
-            &::-webkit-scrollbar {
-                width: 12px;
-            }
-
-            &::-webkit-scrollbar-track {
-                background-color: rgba(#000, 0.025);
-            }
-        }
 
         li {
             padding: 1px 9px;

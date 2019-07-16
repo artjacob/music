@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "gulp serve -s"
+    "serve": "gulp stage && gulp serve -s"
   },
   "author": {
     "name": "Arthur Jacob",

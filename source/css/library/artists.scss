@@ -1,0 +1,45 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// library / artists ///////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.artist {
+    h1 {
+        padding-bottom: 12px;
+        font-weight: 700;
+        font-size: 40px;
+    }
+
+    .albums {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            width: 180px;
+            height: 250px;
+            padding: 0 20px 20px 0;
+
+            .art {
+                $size: 160px;
+                width: $size;
+                height: $size;
+            }
+
+            .title {
+                padding-top: 6px;
+                font-weight: 500;
+            }
+
+            .year {
+                padding-top: 1px;
+                font-size: 12px;
+                color: rgba(#000, 0.5);
+            }
+
+            a:hover {
+                .title {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
