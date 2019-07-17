@@ -9,9 +9,17 @@
         font-size: 40px;
     }
 
+    .content {
+        display: flex;
+    }
+
     .albums {
+        // @include scaffolding();
+        padding-right: 64px;
+
         display: flex;
         flex-wrap: wrap;
+        flex-grow: 2;
 
         li {
             width: 180px;
@@ -40,6 +48,28 @@
                     text-decoration: underline;
                 }
             }
+        }
+    }
+
+    .hits {
+        // @include scaffolding();
+        min-height: 400px;
+        width: 500px;
+        border-radius: 3px;
+        padding: 24px;
+        background-color: rgba($primary-color, 0.125);
+
+        flex-grow: 1;
+
+        .song {
+            padding: 5px;
+
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .length {
+            color: rgba(#000, 0.5);
         }
     }
 }

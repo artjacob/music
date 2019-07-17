@@ -261,10 +261,14 @@
   <template id="artist">
    <div class="artist">
     <h1 class="fill" data-fill="title"></h1>
-    <div class="albums">
-     <ul></ul>
+    <div class="content">
+     <div class="albums">
+      <ul></ul>
+     </div>
+     <div class="hits">
+      <ul></ul>
+     </div>
     </div>
-    <div class="hits"></div>
    </div>
   </template>
   <template id="artist-album">
@@ -272,6 +276,11 @@
      <div class="art fill" data-fill="style: cover-art"></div>
      <div class="title fill" data-fill="title"></div>
      <div class="year fill" data-fill="year"></div></a></li>
+  </template>
+  <template id="artist-hit">
+   <li><a class="song" href="#">
+     <div class="title fill" data-fill="title"></div>
+     <div class="length fill" data-fill="formatted-length"></div></a></li>
   </template>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha384-fYxN7HsDOBRo1wT/NSZ0LkoNlcXvpDpFy6WzB42LxuKAX7sBwgo7vuins+E1HCaw" crossorigin="anonymous"></script>

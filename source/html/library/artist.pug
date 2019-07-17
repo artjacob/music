@@ -6,11 +6,17 @@ template#artist
     .artist
         h1.fill(data-fill="title")
 
-        .albums: ul
-        .hits
+        .content
+            .albums: ul
+            .hits: ul
 
 template#artist-album
     li: a.album(href="#")
         .art.fill(data-fill="style: cover-art")
         .title.fill(data-fill="title")
         .year.fill(data-fill="year")
+
+template#artist-hit
+    li: a.song(href="#")
+        .title.fill(data-fill="title")
+        .length.fill(data-fill="formatted-length")

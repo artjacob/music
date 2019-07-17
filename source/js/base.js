@@ -16,3 +16,7 @@ let cue = { };
 $(function() {
     $ui["library"] = $(".library");
 });
+
+const duration = (seconds) => {
+    return moment.utc(moment.duration(seconds, "seconds").asMilliseconds()).format("m:ss");
+};

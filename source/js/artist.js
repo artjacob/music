@@ -20,6 +20,15 @@ app.Artist = (() => {
                 let $album = __render("artist-album", album).appendTo($albums);
             });
 
+            // Hits
+            let hits = artist["hits"];
+            let $hits = $(".hits", $artist);
+
+            hits.forEach((hit) => {
+                hit["formatted-length"] = duration(hit["length"]);
+                let $hit = __render("artist-hit", hit).appendTo($hits);
+            });
+
             // Coloca na tela
             $ui["library"].empty().append($artist);
         });

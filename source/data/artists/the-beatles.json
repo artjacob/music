@@ -37,5 +37,47 @@
             "cover": "https://lh3.googleusercontent.com/XpUYuTxF5T4z8PZDCSmXSZvbHdBrTxciaMBuSxfQ46wD-U7WvowwbXPICVcjBaDd_Tul93rSYw",
             "type": "studio"
         }
+    ],
+    "hits": [
+        {
+            "title": "Drive My Car",
+            "length": 125
+        },
+        {
+            "title": "The Ballad of John and Yoko",
+            "length": 179
+        },
+        {
+            "title": "All My Loving",
+            "length": 124
+        },
+        {
+            "title": "A Hard Day's Night",
+            "length": 174
+        },
+        {
+            "title": "Norwegian Wood (Thid Bird Has Flown)",
+            "length": 125
+        },
+        {
+            "title": "Yer Blues",
+            "length": 240
+        },
+        {
+            "title": "Octopus's Garden",
+            "length": 171
+        },
+        {
+            "title": "The Long and Winding Road",
+            "length": 218
+        },
+        {
+            "title": "For You Blue",
+            "length": 152
+        },
+        {
+            "title": "Dig a Pony",
+            "length": 235
+        }
     ]
 }

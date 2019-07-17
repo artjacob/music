@@ -2,7 +2,11 @@
 // music ///////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-$primary-color: #1e5a88;
+$primary-color-100: #c4e1f7;
+$primary-color-500: #1e5a88;
+
+$primary-color: $primary-color-500;
+
 $background-color: #eee;
 
 body {
@@ -37,7 +41,11 @@ $layer-now-playing: 2;
     left: $navigation-width * 4.25;
     right: 0;
     padding: 15px 32px;
-    overflow-y: auto;
+    overflow-y: scroll;
+
+    &:hover {
+        padding-right: 24px;
+    }
 }
 
 .album {
