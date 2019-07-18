@@ -59,22 +59,24 @@
                 height: $size;
                 border-radius: $size / 2;
                 background-color: rgba(#000, 0.75);
+
+                // transition: width ease-in 0.25s;
             }
         }
 
         .time {
             width: 34px;
-            padding-bottom: 1px;
+            padding: 0 6px 1px;
             font-size: 10px;
         }
 
         .position {
-            text-align: left;
+            text-align: right;
             order: 3;
         }
 
         .length {
-            text-align: right;
+            text-align: left;
             order: 7;
         }
     }
