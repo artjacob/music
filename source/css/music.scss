@@ -31,7 +31,7 @@ $layer-now-playing: 2;
 @import "navigation";
 
 // Library
-@import "library/artists";
+@import "library/artist";
 
 .library {
     @include scroll;
@@ -61,4 +61,10 @@ $layer-now-playing: 2;
             0 1px 12px 0 rgba(#000, 0.12)
         ;
     }
+}
+
+.player {
+    position: fixed;
+    top: 0;
+    right: 0;
 }

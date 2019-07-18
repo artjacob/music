@@ -3,6 +3,8 @@
 
 	"source/js/core/template-engine.js",
 
+	"source/js/player.js",
+
 	"source/js/artist.js",
 
 	"source/js/start.js"
