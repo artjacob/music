@@ -11,6 +11,7 @@ $(function() {
 
     $np.position = $(".now-playing .position");
     $np.length = $(".now-playing .length");
+    $np.timeline = $(".now-playing .bar");
     $np.elapsed = $(".now-playing .elapsed");
 
     $player.addEventListener("timeupdate", (event) => {
@@ -27,14 +28,47 @@ $(function() {
     });
 
     $ui["now-playing"] = $(".now-playing");
-    $(".play", $ui["now-playing"]).on("click", app.Player.toggle);
+    $(".play", $ui["now-playing"]).on("click", app.Player.playPause);
+
+    // Cliques na linha do tempo
+    $np.timeline.on("click", (event) => {
+        let width = $(event.delegateTarget).width();
+        let position = event.offsetX;
+        let percent = position / width;
+
+        let position_in_seconds = $player.duration * percent;
+        app.Player.skipToPosition(position_in_seconds);
+    });
 });
 
 app.Player = (() => {
 
     // const updateTimeline
 
-    const toggle = () => {
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    // app.Player.skipToPosition()
+    const skipToPosition = (seconds) => {
+        $player.currentTime = seconds;
+    };
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    // app.Player.play()
+    const play = () => {
+        $player.play();
+    };
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    // app.Player.pause()
+    const pause = () => {
+        $player.pause();
+    };
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    // app.Player.playPause()
+    const playPause = () => {
         if ($player.paused) {
             $player.play();
         } else {
@@ -51,7 +85,13 @@ app.Player = (() => {
         // console.log("seekable", $player.seekable);
     };
 
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
     return {
-        toggle
+        skipToPosition,
+        play,
+        pause,
+        playPause
     };
 })();
