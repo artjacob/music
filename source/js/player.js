@@ -6,6 +6,28 @@ let $player;
 
 let $np = { };
 
+if ("mediaSession" in navigator) {
+    navigator.mediaSession.metadata = new MediaMetadata({
+        "title": "Under Cover of Darkness",
+        "artist": "The Strokes",
+        "album": "Angles",
+        "artwork": [
+            {
+                "src": "https://lh3.ggpht.com/Cc4TZKHRq_rdChujsY__QSMO0Hcmw9kPomu9zE06vz-tjKgiVaPo4evmIyN6Gp1owl9uRK_rE-c",
+                "sizes": "512x512",
+                "type": "image/png"
+            }
+        ]
+    });
+
+    navigator.mediaSession.setActionHandler("play", app.Player.play);
+    navigator.mediaSession.setActionHandler("pause", app.Player.pause);
+    // navigator.mediaSession.setActionHandler("seekbackward", function () { });
+    // navigator.mediaSession.setActionHandler("seekforward", function () { });
+    // navigator.mediaSession.setActionHandler("previoustrack", function () { });
+    // navigator.mediaSession.setActionHandler("nexttrack", function () { });
+}
+
 $(function() {
     $player = document.querySelector("audio.player");
 
