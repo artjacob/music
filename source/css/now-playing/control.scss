@@ -17,7 +17,7 @@
         padding-bottom: 6px;
         display: flex;
 
-        .play {
+        .play-pause {
             // border: 1px solid #000;
             box-shadow: inset 0 0 1px 1px #000;
             order: 5;
@@ -79,6 +79,20 @@
         .length {
             text-align: left;
             order: 7;
+        }
+    }
+}
+
+.now-playing {
+    &.-state--playing {
+        .play-pause .play {
+            display: none;
+        }
+    }
+
+    &.-state--paused {
+        .play-pause .pause {
+            display: none;
         }
     }
 }

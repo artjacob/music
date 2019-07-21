@@ -4,7 +4,7 @@
 
 //- audio.player(src="data/files/25 Banjo Billy.m4a", controls)
 
-.now-playing
+.now-playing.-state--paused
     .display
         .info
             .song Under Cover of Darkness
@@ -15,7 +15,9 @@
 
     .control
         .buttons
-            .button.play: i.material-icons play_arrow
+            .button.play-pause
+                i.play.material-icons play_arrow
+                i.pause.material-icons pause
             .button.skip.skip-previous: i.material-icons skip_previous
             .button.skip.skip-next: i.material-icons skip_next
         .timeline

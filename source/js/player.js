@@ -22,13 +22,14 @@ let queue = [
 
 app.Player = (() => {
     let $player = document.createElement("audio");
-    let $np = { };
+    let $np;
     let queue_position = 0;
 
     $(function() {
         // Carrega a primeira música da fila
         $player.src = queue[queue_position]["file"];
 
+        $np = $(".now-playing");
         $np.position = $(".now-playing .position");
         $np.length = $(".now-playing .length");
         $np.timeline = $(".now-playing .bar");
@@ -48,7 +49,7 @@ app.Player = (() => {
         });
 
         $ui["now-playing"] = $(".now-playing");
-        $(".play", $ui["now-playing"]).on("click", app.Player.playPause);
+        $(".play-pause", $ui["now-playing"]).on("click", app.Player.playPause);
         $(".skip-prev", $ui["now-playing"]).on("click", app.Player.previousTrack);
         $(".skip-next", $ui["now-playing"]).on("click", app.Player.nextTrack);
 
@@ -90,6 +91,7 @@ app.Player = (() => {
     // app.Player.play()
     const play = () => {
         $player.play();
+        $np.removeClass("-state--paused").addClass("-state--playing");
     };
 
 
@@ -97,6 +99,7 @@ app.Player = (() => {
     // app.Player.pause()
     const pause = () => {
         $player.pause();
+        $np.removeClass("-state--playing").addClass("-state--paused");
     };
 
 
@@ -104,9 +107,9 @@ app.Player = (() => {
     // app.Player.playPause()
     const playPause = () => {
         if ($player.paused) {
-            $player.play();
+            app.Player.play();
         } else {
-            $player.pause();
+            app.Player.pause();
         }
 
         // console.log("duration", $player.duration);
