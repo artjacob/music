@@ -13,6 +13,7 @@ const config = require("./gulp-config.js");
 const concat = require("gulp-concat");
 const babel = require("gulp-babel");
 const uglify = require("gulp-uglify");
+const fs = require("fs-extra");
 
 let tasks = { };
 
@@ -26,7 +27,9 @@ tasks["watch"] = function watchJS(done) {
 
 // Stage
 tasks["stage"] = function stageJS(done) {
-    gulp.src(config["js"]["source"])
+    let source = fs.readJsonSync(config["js"]["source"][0]);
+
+    gulp.src(source)
         .pipe(plumber())
         .pipe(sourcemaps.init())
 

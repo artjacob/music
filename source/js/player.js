@@ -18,14 +18,47 @@ let queue = [
         "length": 180,
         "cover": "https://lh5.ggpht.com/hwEKMItKyFyHIgNl28CfbBr-RYLvNhDUj_SFe757m_gH2yNsoRXYmXgWI02tkAoVLKCNIihb",
         "file": "/data/files/30 Tico Tico.m4a"
+    },
+    {
+        "title": "A Hazy Shade of Winter",
+        "artist": "Simon & Garfunkel",
+        "album": "Bookends",
+        "length": 137,
+        "cover": "https://lh3.googleusercontent.com/mfcnZMpqYi2OIslr9U56PecJytP2jQAj9BcOfx7mEkCCBTRI4VxpwzVe5Gur_qS5Xk1kRli5gQ",
+        "file": "/data/files/11 A Hazy Shade of Winter.m4a"
     }
 ];
 
 let $np;
+let $player = document.createElement("audio");
 
 app.Player = (() => {
-    let $player = document.createElement("audio");
     let queue_position = 0;
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    // Eventos
+
+    // Define o tempo de duração quando uma música é carregada música
+    $player.addEventListener("loadedmetadata", () => {
+        let length = duration($player.duration);
+        $np.length.text(length);
+    });
+
+    // Atualiza barra de tempo
+    $player.addEventListener("timeupdate", () => {
+        let position = duration($player.currentTime);
+        $np.position.text(position);
+
+        let percent = $player.currentTime / $player.duration * 100;
+        $np.elapsed.css("width", percent + "%");
+    });
+
+    // Passa para próxima música quando a atual chega ao fim
+    $player.addEventListener("ended", () => {
+        app.Player.nextTrack();
+    });
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
 
     $(function() {
         $np = $(".now-playing");
@@ -39,25 +72,9 @@ app.Player = (() => {
         $np.album = $(".now-playing .album");
         $np.cover = $(".now-playing .cover");
 
-        $player.addEventListener("timeupdate", (event) => {
-            let position = duration($player.currentTime);
-            $np.position.text(position);
-
-            let percent = $player.currentTime / $player.duration * 100;
-            $np.elapsed.css("width", percent + "%");
-
-            // console.log(position_is_seconds, human_position);
-        });
-
-        // Define o tempo de duração quando uma música é carregada música
-        $player.addEventListener("loadedmetadata", () => {
-            let length = duration($player.duration);
-            $np.length.text(length);
-        });
-
         $ui["now-playing"] = $(".now-playing");
         $(".play-pause", $ui["now-playing"]).on("click", app.Player.playPause);
-        $(".skip-prev", $ui["now-playing"]).on("click", app.Player.previousTrack);
+        $(".skip-previous", $ui["now-playing"]).on("click", app.Player.previousTrack);
         $(".skip-next", $ui["now-playing"]).on("click", app.Player.nextTrack);
 
         // Cliques na linha do tempo
@@ -157,8 +174,13 @@ app.Player = (() => {
     ////////////////////////////////////////////////////////////////////////////////////////////////
     // app.Player.previousTrack()
     const previousTrack = () => {
-        queue_position = (queue_position - 1 + queue.length) % queue.length;
-        app.Player.load(queue[queue_position]);
+        // Se tiver após os 5 segundos da música atual, volta para o começo
+        if ($player.currentTime > 5) {
+            $player.currentTime = 0;
+        } else {
+            queue_position = (queue_position - 1 + queue.length) % queue.length;
+            app.Player.load(queue[queue_position]);
+        }
     };
 
 
