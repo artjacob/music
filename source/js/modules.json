@@ -7,5 +7,7 @@
 
 	"source/js/artist.js",
 
+	"source/js/commands.js",
+
 	"source/js/start.js"
 ]
