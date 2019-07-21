@@ -8,6 +8,7 @@ let queue = [
         "artist": "Louk",
         "album": "Chillhop Essentials Winter 2018",
         "length": 140,
+        "cover": "https://lh3.googleusercontent.com/JJAK0mX_p5KLf9_efSEr7l2o2oAGyCn7b8-pOsfp8_jf02uvJUIJ1pDtDZx1JsJAfM5YOe2BIEA",
         "file": "/data/files/14 Captain Calvin (Original Mix).mp3"
     },
     {
@@ -15,30 +16,30 @@ let queue = [
         "artist": "Oscar Peterson",
         "album": "Ultimate Jazz Collections",
         "length": 180,
+        "cover": "https://lh5.ggpht.com/hwEKMItKyFyHIgNl28CfbBr-RYLvNhDUj_SFe757m_gH2yNsoRXYmXgWI02tkAoVLKCNIihb",
         "file": "/data/files/30 Tico Tico.m4a"
     }
 ];
 
+let $np;
 
 app.Player = (() => {
     let $player = document.createElement("audio");
-    let $np;
     let queue_position = 0;
 
     $(function() {
-        // Carrega a primeira música da fila
-        $player.src = queue[queue_position]["file"];
-
         $np = $(".now-playing");
         $np.position = $(".now-playing .position");
         $np.length = $(".now-playing .length");
         $np.timeline = $(".now-playing .bar");
         $np.elapsed = $(".now-playing .elapsed");
 
-        $player.addEventListener("timeupdate", (event) => {
-            let length = duration($player.duration);
-            $np.length.text(length);
+        $np.song = $(".now-playing .song");
+        $np.artist = $(".now-playing .artist");
+        $np.album = $(".now-playing .album");
+        $np.cover = $(".now-playing .cover");
 
+        $player.addEventListener("timeupdate", (event) => {
             let position = duration($player.currentTime);
             $np.position.text(position);
 
@@ -46,6 +47,12 @@ app.Player = (() => {
             $np.elapsed.css("width", percent + "%");
 
             // console.log(position_is_seconds, human_position);
+        });
+
+        // Define o tempo de duração quando uma música é carregada música
+        $player.addEventListener("loadedmetadata", () => {
+            let length = duration($player.duration);
+            $np.length.text(length);
         });
 
         $ui["now-playing"] = $(".now-playing");
@@ -62,6 +69,9 @@ app.Player = (() => {
             let position_in_seconds = $player.duration * percent;
             app.Player.skipToPosition(position_in_seconds);
         });
+
+        // Carrega a primeira música da fila
+        app.Player.load(queue[queue_position]);
     });
 
     // const updateTimeline
@@ -69,14 +79,35 @@ app.Player = (() => {
     ////////////////////////////////////////////////////////////////////////////////////////////////
     // app.Player.skipToPosition()
     const load = (song) => {
-        $player.pause();
+        // Pausa a reprodução, reseta o tempo e carrega a nova música
+        app.Player.pause();
         $player.currentTime = 0;
         $player.src = song["file"];
 
-        let length = duration($player.duration);
-        $np.length.text(length);
+        // Atualiza as informações sobre a música em reprodução
+        $np.song.text(song["title"]);
+        $np.artist.text(song["artist"]);
+        $np.album.text(song["album"]);
+        $np.cover.css("background-image", "url('" + song["cover"] + "')");
 
-        $player.play();
+        // Atualiza dados da Media Session API
+        if ("mediaSession" in navigator) {
+            navigator.mediaSession.metadata = new MediaMetadata({
+                "title": song["title"],
+                "artist": song["artist"],
+                "album": song["album"],
+                "artwork": [
+                    {
+                        "src": song["cover"],
+                        "sizes": "512x512",
+                        "type": "image/png"
+                    }
+                ]
+            });
+        }
+
+        // Inicia a reprodução
+        app.Player.play();
     };
 
 
@@ -153,23 +184,10 @@ app.Player = (() => {
 })();
 
 if ("mediaSession" in navigator) {
-    navigator.mediaSession.metadata = new MediaMetadata({
-        "title": "Under Cover of Darkness",
-        "artist": "The Strokes",
-        "album": "Angles",
-        "artwork": [
-            {
-                "src": "https://lh3.ggpht.com/Cc4TZKHRq_rdChujsY__QSMO0Hcmw9kPomu9zE06vz-tjKgiVaPo4evmIyN6Gp1owl9uRK_rE-c",
-                "sizes": "512x512",
-                "type": "image/png"
-            }
-        ]
-    });
-
     navigator.mediaSession.setActionHandler("play", app.Player.play);
     navigator.mediaSession.setActionHandler("pause", app.Player.pause);
     // navigator.mediaSession.setActionHandler("seekbackward", function () { });
     // navigator.mediaSession.setActionHandler("seekforward", function () { });
-    // navigator.mediaSession.setActionHandler("previoustrack", function () { });
-    // navigator.mediaSession.setActionHandler("nexttrack", function () { });
+    navigator.mediaSession.setActionHandler("previoustrack", app.Player.previousTrack);
+    navigator.mediaSession.setActionHandler("nexttrack", app.Player.nextTrack);
 }
