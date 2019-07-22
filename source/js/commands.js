@@ -28,7 +28,10 @@ let commands = [
 
 commands.forEach((command) => {
     command["shortcut"].forEach((shortcut) => {
-        Mousetrap.bind(shortcut, command["function"]);
+        Mousetrap.bind(shortcut, () => {
+            command["function"]();
+            return false;
+        });
     });
 });
 
