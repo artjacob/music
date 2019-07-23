@@ -11,6 +11,27 @@
     align-items: center;
     justify-content: flex-end;
 
+    .repeat {
+        .one {
+            display: none;
+        }
+
+        &.-option--all,
+        &.-option--one {
+            background-color: $primary-color-100;
+        }
+
+        &.-option--one {
+            .all {
+                display: none;
+            }
+
+            .one {
+                display: block;
+            }
+        }
+    }
+
     .up-next {
         $size: 36px;
         height: $size;

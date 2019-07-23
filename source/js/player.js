@@ -35,6 +35,9 @@ let $player = document.createElement("audio");
 app.Player = (() => {
     let queue_position = 0;
 
+    let repeat = "none";
+    let repeat_options = ["none", "all", "one"];
+
     ////////////////////////////////////////////////////////////////////////////////////////////////
     // Eventos
 
@@ -55,7 +58,12 @@ app.Player = (() => {
 
     // Passa para próxima música quando a atual chega ao fim
     $player.addEventListener("ended", () => {
-        app.Player.nextTrack();
+        if (repeat === "one") {
+            $player.currentTime = 0;
+            app.Player.play();
+        } else {
+            app.Player.nextTrack();
+        }
     });
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -76,6 +84,7 @@ app.Player = (() => {
         $(".play-pause", $ui["now-playing"]).on("click", app.Player.playPause);
         $(".skip-previous", $ui["now-playing"]).on("click", app.Player.previousTrack);
         $(".skip-next", $ui["now-playing"]).on("click", app.Player.nextTrack);
+        $(".repeat", $ui["now-playing"]).on("click", app.Player.toggleRepeat);
 
         // Cliques na linha do tempo
         $np.timeline.on("click", (event) => {
@@ -187,8 +196,24 @@ app.Player = (() => {
     ////////////////////////////////////////////////////////////////////////////////////////////////
     // app.Player.nextTrack()
     const nextTrack = () => {
-        queue_position = (queue_position + 1) % queue.length;
-        app.Player.load(queue[queue_position]);
+        if (queue_position + 1 < queue.length || repeat === "all") {
+            queue_position = (queue_position + 1) % queue.length;
+            app.Player.load(queue[queue_position]);
+        }
+    };
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    // app.Player.toggleRepeat()
+    const toggleRepeat = () => {
+        let current_value = repeat;
+        let new_value = repeat_options[repeat_options.indexOf(current_value) + 1];
+
+        repeat = new_value;
+
+        $(".repeat", $ui["now-playing"])
+            .removeClass("-option--" + current_value)
+            .addClass("-option--" + new_value);
     };
 
 
@@ -201,7 +226,8 @@ app.Player = (() => {
         pause,
         playPause,
         previousTrack,
-        nextTrack
+        nextTrack,
+        toggleRepeat
     };
 })();
 
