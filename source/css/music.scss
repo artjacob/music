@@ -10,7 +10,9 @@ $primary-color: $primary-color-500;
 $background-color: #eee;
 
 body {
-    font: 16px "ibm plex sans", sans-serif;
+    font: 16px "Barlow", sans-serif;
+    // font: 16px "Barlow Condensed", sans-serif;
+    // font: 16px "Barlow Semi Condensed", sans-serif;
     background-color: $background-color;
 }
 
