@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "gulp stage && gulp serve -s"
+    "serve": "gulp serve -s",
+    "start": "gulp serve -s"
   },
   "author": {
     "name": "Arthur Jacob",
@@ -22,6 +23,7 @@
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-plumber": "^1.2.0",
     "gulp-pug": "^4.0.1",
@@ -32,7 +34,6 @@
   },
   "private": true,
   "dependencies": {
-    "gulp-csso": "^4.0.1",
     "music-metadata": "^4.2.1"
   }
 }

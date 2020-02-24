@@ -21,13 +21,13 @@ let tasks = { };
 
 // Watch
 tasks["watch"] = function watchJS(done) {
-    gulp.watch(config["js"]["watch"], { "cwd": config["js"]["dir"] }, tasks["stage"]);
+    gulp.watch(config["js"]["watch"], { "cwd": config["js"]["dir"], "ignoreInitial": false }, tasks["stage"]);
     done();
 };
 
 // Stage
 tasks["stage"] = function stageJS(done) {
-    let source = fs.readJsonSync(config["js"]["source"][0]);
+    let source = fs.readJsonSync(config["js"]["source"][0]).map(file => "./source/js/" + file);
 
     gulp.src(source)
         .pipe(plumber())

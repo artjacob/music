@@ -20,7 +20,7 @@ let tasks = { };
 
 // Watch
 tasks["watch"] = function watchCSS(done) {
-    gulp.watch(config["css"]["watch"], { "cwd": config["css"]["dir"] }, tasks["stage"]);
+    gulp.watch(config["css"]["watch"], { "cwd": config["css"]["dir"], "ignoreInitial": false }, tasks["stage"]);
     done();
 };
 

@@ -19,7 +19,7 @@ let tasks = { };
 
 // Watch
 tasks["watch"] = function watchHTML(done) {
-    gulp.watch(config["html"]["watch"], { "cwd": config["html"]["dir"] }, tasks["stage"]);
+    gulp.watch(config["html"]["watch"], { "cwd": config["html"]["dir"], "ignoreInitial": false }, tasks["stage"]);
     done();
 };
 
@@ -36,7 +36,7 @@ tasks["stage"] = function stageHTML(done) {
                 }
             }))
 
-            .pipe(rename("index.html"))
+            .pipe(rename("player.html"))
             .pipe(gulp.dest(config["html"]["destination"][channel], { mode: "0644" }));
     }
 

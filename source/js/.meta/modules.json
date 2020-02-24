@@ -1,0 +1,13 @@
+[
+	"base.js",
+
+	"core/template-engine.js",
+
+	"player.js",
+
+	"artist.js",
+
+	"commands.js",
+
+	"start.js"
+]

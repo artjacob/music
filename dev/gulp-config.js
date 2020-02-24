@@ -19,7 +19,7 @@ config["js"] = {
 	"color": "yellow",
 	"dir": "./source/js/",
 	"watch": ["**/**.js", "**/**.json"],
-	"source": ["./source/js/modules.json"],
+	"source": ["./source/js/.meta/modules.json"],
 	"destination": {
 		"development": "./public/"
 	}
