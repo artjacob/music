@@ -35,6 +35,8 @@ $layer-now-playing: 2;
 // Library
 @import "library/artist";
 
+@import "upload";
+
 .library {
     @include scroll;
     position: fixed;

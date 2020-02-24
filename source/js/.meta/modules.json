@@ -7,6 +7,8 @@
 
 	"artist.js",
 
+	"upload.js",
+
 	"commands.js",
 
 	"start.js"
