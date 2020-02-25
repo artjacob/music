@@ -41,7 +41,7 @@ app.Player = (() => {
     ////////////////////////////////////////////////////////////////////////////////////////////////
     // Eventos
 
-    // Define o tempo de duração quando uma música é carregada música
+    // Define o tempo de duração quando uma música é carregada
     $player.addEventListener("loadedmetadata", () => {
         let length = duration($player.duration);
         $np.length.text(length);
@@ -97,14 +97,14 @@ app.Player = (() => {
         });
 
         // Carrega a primeira música da fila
-        app.Player.load(queue[queue_position]);
+        app.Player.load(queue[queue_position], false);
     });
 
     // const updateTimeline
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
     // app.Player.skipToPosition()
-    const load = (song) => {
+    const load = (song, autoplay = true) => {
         // Pausa a reprodução, reseta o tempo e carrega a nova música
         app.Player.pause();
         $player.currentTime = 0;
@@ -133,7 +133,9 @@ app.Player = (() => {
         }
 
         // Inicia a reprodução
-        app.Player.play();
+        if (autoplay) {
+            app.Player.play();
+        }
     };
 
 
