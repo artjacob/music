@@ -1,6 +1,8 @@
 const admin = require("firebase-admin");
 const functions = require("firebase-functions");
 
+const gcpRegion = "us-east1";
+
 const runtimeOptions = {
 	"memory": "128MB",
 	"timeoutSeconds": 10
@@ -17,7 +19,7 @@ const db = admin.firestore();
 //  response.send("Hello from Firebase!");
 // });
 
-exports.createNewUser = functions.runWith(runtimeOptions).auth.user().onCreate(user => {
+exports.createNewUser = functions.region(gcpRegion).runWith(runtimeOptions).auth.user().onCreate(user => {
 	const uid = user.uid;
 	const userJson = user.toJSON();
 	const userData = {
@@ -25,7 +27,7 @@ exports.createNewUser = functions.runWith(runtimeOptions).auth.user().onCreate(u
 		"email": userJson.email,
 		"phoneNumber": userJson.phoneNumber,
 		"photoURL": userJson.photoURL,
-		"providerData": [ ],
+		"providerData": { },
 		"creationTime": userJson.metadata.creationTime,
 		"lastSignInTime": userJson.metadata.lastSignInTime,
 		"disabled": userJson.disabled,
@@ -33,15 +35,16 @@ exports.createNewUser = functions.runWith(runtimeOptions).auth.user().onCreate(u
 
 	// Provider data
 	userJson.providerData.forEach(provider => {
+		const providerId = provider.providerId;
 		let filteredProviderData = { };
 
 		for (const property in provider) {
-			if (typeof provider[property] !== "function" ) {
+			if (typeof provider[property] !== "function" && property !== "providerId") {
 				filteredProviderData[property] = provider[property];
 			}
 		}
 
-		userData.providerData.push(filteredProviderData);
+		userData.providerData[providerId] = filteredProviderData;
 	});
 
 	db.collection("users").doc(uid).set({ "userData": userData });
